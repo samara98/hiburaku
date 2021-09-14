@@ -1,0 +1,20 @@
+server:
+  port: 4001
+  error:
+    include-message: "always"
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/hiburaku-movie"
+    username: "postgres"
+    password: "postgres"
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.PostgreSQL81Dialect"
+        format_sql: true
